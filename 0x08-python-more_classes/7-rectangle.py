@@ -56,6 +56,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
+
     def __str__(self) -> str:
         """ a diagram of the rectangle"""
         if self.__width == 0 or self.__height == 0:
@@ -73,7 +74,7 @@ class Rectangle:
 
     def __repr__(self):
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
-    
+
     def __del__(self):
         """prints a message for each deletion"""
         print("Bye rectangle...")
