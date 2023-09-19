@@ -63,6 +63,6 @@ class Square(Rectangle):
         """The dictionary representation of a Square"""
 
         obj_dict = {'id': self.id, 'size': self.size, 'x': self.x,
-                          'y': self.y}
+                    'y': self.y}
 
         return obj_dict
