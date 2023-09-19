@@ -41,7 +41,7 @@ class Rectangle(Base):
     def width(self, value):
         """Sets the width"""
         if (type(value) is not int):
-            raise TypeError("width is not an integer")
+            raise TypeError("width must be an integer")
 
         if value <= 0:
             raise ValueError("width must be > 0")
@@ -52,7 +52,7 @@ class Rectangle(Base):
     def height(self, value):
         """Sets the height"""
         if (type(value) is not int):
-            raise TypeError("height is not an integer")
+            raise TypeError("height must be an integer")
 
         if value <= 0:
             raise ValueError("height must be > 0")
@@ -63,7 +63,7 @@ class Rectangle(Base):
     def x(self, value):
         """Sets the x"""
         if (type(value) is not int):
-            raise TypeError("x is not an integer")
+            raise TypeError("x must be an integer")
 
         if value < 0:
             raise ValueError("x must be >= 0")
@@ -74,9 +74,29 @@ class Rectangle(Base):
     def y(self, value):
         """Sets the y"""
         if (type(value) is not int):
-            raise TypeError("y is not an integer")
+            raise TypeError("y must be an integer")
 
         if value < 0:
             raise ValueError("y must be >= 0")
 
         self.__y = value
+
+    def area(self):
+        """Returns the area of the rectangle"""
+        return (self.__height * self.__width)
+
+    def display(self):
+        """Displays the rectangle using # """
+        for y in range(self.y):
+            print("")
+        for row in range(self.__height):
+            for x in range(self.x):
+                print(" ", end="")
+            for column in range(self.__width):
+                print("#", end="")
+            print()
+
+    def __str__(self):
+        """Defines the string representation of the class"""
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - \
+{self.__width}/{self.__height}"
