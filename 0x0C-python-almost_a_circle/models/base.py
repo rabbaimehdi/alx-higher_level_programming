@@ -2,6 +2,8 @@
 
 """This module contains the class base"""
 
+import json
+
 
 class Base:
     """Base of all classes"""
