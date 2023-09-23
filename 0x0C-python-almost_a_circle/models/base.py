@@ -3,6 +3,7 @@
 """This module contains the class base"""
 
 import json
+import os
 
 
 class Base:
