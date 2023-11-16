@@ -6,9 +6,9 @@ class Square extends Square_ {
     if (c === undefined) {
       this.print();
     } else {
-      for (let i = 0; i < this.size; i++) {
+      for (let i = 0; i < this.width; i++) {
         let printChar = '';
-        for (let j = 0; j < this.size; j++) {
+        for (let j = 0; j < this.height; j++) {
           printChar += c;
         }
         console.log(printChar);
