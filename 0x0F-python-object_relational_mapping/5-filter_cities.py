@@ -17,8 +17,7 @@ def main():
                  on cities.state_id = states.id WHERE states.name LIKE BINARY \
                  %(name)s ORDER BY cities.id ASC", {'name': sys.argv[4]})
     query_row = cur.fetchall()
-    for row in query_row:
-        print(row)
+    print(", ".join([row[0] for row in query_row]))
     cur.close()
     conn.close()
 
