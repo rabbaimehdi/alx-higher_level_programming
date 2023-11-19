@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Write a script that adds the State object “Louisiana” to the database hbtn_0e_6_usa
+"""Write a script that adds the State object
+“Louisiana” to the database hbtn_0e_6_usa
 """
 
 from sys import argv
@@ -16,7 +17,8 @@ def main():
     new_state = State("Louisiana")
     session.add(new_state)
     session.commit()
-    new_state_id = session.query(State).filter(State.name == "Louisiana").first()
+    new_state_id = session.query(State).filter(
+        State.name == "Louisiana").first()
     print(f"{new_state_id.id}")
 
 
