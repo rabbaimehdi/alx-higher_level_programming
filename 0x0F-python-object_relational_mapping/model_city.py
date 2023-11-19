@@ -11,6 +11,16 @@ from sqlalchemy.orm import relationship
 
 
 class City(Base):
+    """
+        City class
+
+        attributes:
+        __tablename__ (str): name of the db table
+        id (int): id for city
+        name (str): name of the city
+        state_id (int): id of the state of the city
+        """
+
     __tablename__ = "cities"
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
