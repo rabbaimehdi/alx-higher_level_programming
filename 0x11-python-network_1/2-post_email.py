@@ -7,11 +7,13 @@ and displays the body of the response (decoded in utf-8)
 from urllib import request, parse
 from sys import argv
 
+
 def main():
-    query_params = parse.urlencode({'email' : argv[2]}).encode("ascii")
+    query_params = parse.urlencode({'email': argv[2]}).encode("ascii")
     url = argv[1]
     with request.urlopen(request.Request(url, query_params)) as response:
         print(response.read().decode('utf-8'))
+
 
 if __name__ == "__main__":
     main()
