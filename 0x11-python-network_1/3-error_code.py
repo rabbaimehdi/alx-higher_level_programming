@@ -11,7 +11,7 @@ from sys import argv
 def main():
     try:
         with request.urlopen(argv[1]) as response:
-            print(request.read().decode("utf-8"))
+            print(request.read().decode("ascii"))
     except error.HTTPError as e:
         print(f"Error code: {e.code}")
 
