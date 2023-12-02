@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 Display the variable X-Request-Id in the response header
 """
