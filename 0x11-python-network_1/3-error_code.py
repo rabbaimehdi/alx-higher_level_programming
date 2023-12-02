@@ -10,7 +10,7 @@ from sys import argv
 
 def main():
     try:
-        with request.urlopen(argv[1]) as response:
+        with request.urlopen(request.Request(argv[1])) as response:
             print(request.read().decode("ascii"))
     except error.HTTPError as e:
         print(f"Error code: {e.code}")
