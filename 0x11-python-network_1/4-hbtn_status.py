@@ -5,6 +5,7 @@ https://alx-intranet.hbtn.io/status
 """
 import requests
 
+
 def main():
     body = requests.get("https://alx-intranet.hbtn.io/status")
     print("Body response:")
