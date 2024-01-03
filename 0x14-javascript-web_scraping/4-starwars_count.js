@@ -11,7 +11,7 @@ request(url, (error, response, body) => {
     body = JSON.parse(body);
     let counter = 0;
     body.results.forEach(element => {
-      if (element.characters.includes('https://swapi-api.alx-tools.com/api/people/18/')) {
+      if (element.characters.includes(`https://swapi-api.alx-tools.com/api/people/${18}/`)) {
         counter += 1;
       }
     }
